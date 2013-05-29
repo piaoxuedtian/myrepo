@@ -1,0 +1,238 @@
+/*******************************************************************************
+ * 表单
+ ******************************************************************************/
+.search-form {
+    border: #D4D4D4 solid 1px;
+    margin-bottom: 0.6em;
+}
+.form-outside {
+    border: #D4D4D4 solid 1px;
+}
+.form .column {
+    float: left;
+    margin-right: 10px;
+}
+#common-search-form-layout {
+    color: #999;
+}
+#common-search-form-layout .column {
+    width: 45%;
+}
+.form {
+    clear: both;
+    border: #F5F5F5 solid 4px;
+    background-color: #FFFFFF;
+    padding: 5px 0;
+}
+div.form .entry {
+    overflow:hidden;
+    /*        float: left;*/
+    clear: both;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: transparent url("../images/dot.gif") repeat-x left bottom;
+    width: 100%;
+}
+div.form .buttons {
+    background: none;
+}
+form .entry label {
+    display: block;
+    float: left;
+    font-weight: bold;
+    padding: 5px 15px 5px 5px;
+    margin-right: 5px;
+    position: relative;
+    width: 80px;
+    background: url("../images/form-label-bg.gif") no-repeat right top;
+    border-left: #CCCCCC solid 1px;
+    padding-left: 10px;
+    margin-left: 10px;
+    text-align: right;
+    color: #999999;
+}
+.form .label-indent {
+    margin-left: 115px;
+}
+div.form .wrap {
+    float: left;
+    background-color: #EEEEEE;
+    padding: 3px;
+}
+div.form .remove-effect {
+    background-color: transparent;
+    padding: 0;
+}
+div.form .entry .wrap label input {
+    float: left;
+}
+div.form .entry input, div.form .entry textarea, div.form .entry input, div.form .entry .wrap textarea {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+div.form .entry input[type="radio"],
+div.form .entry input[type="checkbox"] {
+    height: 14px;
+    margin: 8px 0;
+}
+
+input[type=text].disabled, select.disabled, input[type=password].disabled, input.disabled, textarea.disabled {
+    background: #F5F5F5;
+}
+.g-text {
+    background: url("../images/input-bg.png") repeat-x scroll 0 -130px #fff;
+    /*    background: url(../images/login/textinputbg.gif) repeat-x #fff;*/
+    border: 1px solid #AAAAAA;
+    height: 14px;
+    padding: 5px 5px 6px;
+}
+.g-text:focus {
+    border-color: #999;
+}
+.g-text-area {
+    background: url("../images/input-bg.png") repeat-x scroll 0 -130px #fff;
+    border: 1px solid #AAAAAA;
+    width: 604px;
+    height: 120px;
+    max-height: 450px;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 5px 5px 6px;
+    resize: none;
+}
+.g-text-area:focus {
+    border-color: #999;
+}
+.g-editor {
+    background-color: #ccc;
+    width: 600px;
+    height: 200px;
+}
+.icon-datetime-picker {
+    width: 100px;
+    background:#fff url("../images/datetime-picker.gif") no-repeat right;
+}
+div.form .wrap .hint {
+    color: #999;
+    margin: 0;
+    padding: 5px;
+}
+div.form .note {
+    font-style: italic;
+}
+div.form span.required {
+    color: red;
+}
+div.form div.error label,div.form label.error,div.form span.error {
+    color: #C00;
+    margin: 0;
+    margin-right: 10px;
+    border: none;
+}
+div.form input.error,div.form textarea.error,div.form select.error {
+    background: #FEE;
+    border-color: #C00;
+    border-width: 1px;
+    padding: 5px 5px 6px;
+}
+div.form input.success,div.form textarea.success,div.form select.success {
+    background: #E6EFC2;
+    border-color: #C6D880;
+}
+textarea.focus, input.focus {
+    background: none repeat scroll 0 0 #C0DDFC;
+}
+textarea.blur, input.blur {
+    background-color: #FFFFFF;
+}
+.form div.notification {
+    border-color: #cecece;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    clear: both;
+    margin: 10px 0;
+    margin-right: 20px;
+    moz-border-radius: 3px;
+    padding: 10px;
+    webkit-border-radius: 3px;
+}
+.form div.hint {
+    line-height: 19px;
+}
+.form div.success {
+    /*    background-color: #e2fae4;
+        border: 1px solid #a9c1a9;*/
+    color: #3b6017;
+}
+.form div.error {
+    /*    background-color: #feeeee;
+        border-color: #ce8e8b;*/
+    color: #900;
+}
+.form div.info {
+    /*    background-color: #f4f8fc;
+        border-color: #268ccc;*/
+    color: #004d7e;
+}
+.form div.notification ul {
+    font-size: 11px;
+    line-height: 18px;
+    list-style: disc;
+    list-style-position: outside;
+    margin: 10px 0 0 15px;
+}
+.main .form .wrap div.error {
+    background: none;
+}
+.errorMessage, .errorSummary {
+    border: 1px solid #FBC2C4;
+    border-top: none;
+    border-radius: 3px;
+    color: #8a1f11;
+    margin: 0;
+    margin-top: -1px;
+    moz-border-radius: 3px;
+    padding: 6px 20px;
+    webkit-border-radius: 3px;
+    background: #FBE3E4 url("../images/error.png") no-repeat left center;
+}
+.errorSummary {
+    border-top: 1px solid #FBC2C4;
+    background: #FBE3E4;
+    margin: 10px;
+}
+.errorSummary p {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #FBC2C4;
+    background: url("../images/rgicon1.gif") no-repeat left center;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 13px;
+}
+.errorSummary ul li {
+    line-height: 24px;
+    padding-left: 20px;
+    background: url("../images/pao.gif") no-repeat left center;
+}
+.errorMessage ul {
+    margin: 10px 0;
+}
+/*******************************************************************************
+ * 用户头像上传
+ ******************************************************************************/
+.avatar-uploading {
+    margin: 10px;
+}
+.avatar-uploading .avatar {
+    width: 117px;
+    height: 118px;
+    overflow: hidden;
+    background: url("../images/avatar-bg.jpg") no-repeat;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.avatar-uploading .avatar img {
+    margin: 5px 11px 20px 5px;
+}

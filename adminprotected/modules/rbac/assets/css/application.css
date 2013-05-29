@@ -1,0 +1,465 @@
+/*******************************************************************************
+ * application css file
+ * @author hiscaler
+ * Copyright by www.yadjet.com
+ ******************************************************************************/
+/*******************************************************************************
+ * 全局设置
+ ******************************************************************************/
+body {
+    background: #FFF;
+    color: #333333;
+    font-family: Tahoma,"宋体";
+    font-size: 12px;
+    padding: 0;
+}
+body, div, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #333333;
+    font-size: 12px;
+    text-decoration: none;
+}
+a:hover {
+    color: #CC0000;
+    text-decoration: underline;
+}
+fieldset, img {
+    border: 0 none;
+}
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+ol, ul {
+    list-style: none outside none;
+}
+caption, th {
+    text-align: left;
+}
+q:before, q:after {
+    content: "";
+}
+/*table {
+    table-layout: fixed;
+}*/
+th, td {
+    vertical-align: middle;
+}
+i {
+    display: inline-block;
+    overflow: hidden;
+}
+iframe {
+    background-color: white;
+}
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 2px;
+}
+input {
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    outline: medium none;
+}
+label input {
+    font-size: 12px;
+    position: relative;
+    top: 2px;
+}
+textarea {
+    font-size: 12px;
+    overflow: auto;
+    padding: 1px 0 0 1px;
+}
+select {
+    font-size: 12px;
+    padding: 4px 4px 4px 3px;
+}
+cite {
+    display: none;
+    line-height: 33px;
+    text-indent: -999px;
+}
+.left { float: left; }
+.right { float: right; }
+.nowrap {
+    white-space: nowrap;
+}
+/*******************************************************************************
+ * From blueprint css form.css file
+ ******************************************************************************/
+label {font-weight:bold;}
+fieldset {padding:0 1.4em 1.4em 1.4em;margin:0 0 1.5em 0;border:1px solid #ccc;}
+legend {font-weight:bold;font-size:1.2em;margin-top:-0.2em;margin-bottom:1em; padding: 0 10px; }
+fieldset, #IE8#HACK {padding-top:1.4em;}
+legend, #IE8#HACK {margin-top:0;margin-bottom:0;}
+input[type=text], input[type=password], input.text, input.title, textarea {background-color:#fff;border:1px solid #bbb;}
+input[type=text]:focus, input[type=password]:focus, input.text:focus, input.title:focus, textarea:focus {border-color:#666;}
+select {background-color:#fff;border-width:1px;border-style:solid;}
+input[type=text], input[type=password], input.text, input.title, textarea {margin:0.5em 0;}
+input.text, input.title {width:300px;padding:5px;}
+input.title {font-size:1.5em;}
+textarea {width:390px;height:250px;padding:5px;}
+form.inline {line-height:3;}
+form.inline p {margin-bottom:0;}
+
+.wrapper {
+    display: block;
+    margin-bottom: .6em;
+    *zoom: 1;
+}
+/* 清除浮动 */
+.clearfix:after, .wrapper:after {
+    content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;
+}
+.clearfix, .wrapper {display:block;}
+.clear {clear:both;}
+
+.hidden {
+    display: none;
+}
+/*******************************************************************************
+ * Go to up and down buttons
+ ******************************************************************************/
+#go-top-btns {
+    background: url("../images/top-btns.png") repeat scroll 0 0 transparent;
+    bottom: 10px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    width: 30px;
+}
+#go-top-btns a {
+    background: url("../images/top-btns.png") no-repeat scroll 40px 0 transparent;
+    display: block;
+    width: 30px;
+}
+#go-top-btn-up {
+    height: 30px;
+}
+#go-top-btn-up:hover {
+    background-position: -30px top;
+}
+#go-top-btn-down {
+    height: 20px;
+}
+#go-top-btn-down:hover {
+    background-position: -30px -30px;
+}
+/*******************************************************************************
+ * Grids
+ ******************************************************************************/
+#rbac-page {
+    padding: 10px;
+}
+.grid-s6m0e0 .main-wrap { margin: 0 0 0 170px; }
+.grid-s6m0e0 .col-sub { width: 160px; margin-left: -100%; }
+.grid-s6m0e0 .col-extra { width: 0px; margin-left: -0px; }
+/** 布局基础样式 **/
+.col-main {
+    float: left;
+    width: 100%;
+    /* bug fix: 主栏没有内容时，在 Firefox 和 Chrome 等浏览器下，布局不对 */
+    min-height: 1px;
+}
+.col-sub, .col-extra {
+    float: left;
+    /*position: relative;  按需设置，仅在需要时添加 */
+}
+/** 清除浮动 **/
+.layout:after, .main-wrap:after, .col-sub:after, .col-extra:after {
+	content: '\20';
+	display: block;
+	height: 0;
+	clear: both;
+}
+.layout, .main-wrap, .col-sub, .col-extra {
+    *zoom: 1;
+}
+/*******************************************************************************
+ * 数据列表
+ ******************************************************************************/
+ul.rbac-data-list {}
+ul.rbac-data-list li {
+    line-height: 24px;
+    background: url("../images/bullet-blue.png") no-repeat left center;
+    padding-left: 16px;
+}
+ul.rbac-data-list li label {
+    font-weight: normal;
+    padding: 2px 6px;
+    background-color: #7692BC;
+    color: #FFF;
+    border-radius: 3px;
+}
+ul.rbac-data-list li em {
+    float: right;
+    color: #A2A4A5;
+}
+/* 消息盒子 */
+.message-box {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #FFD324;
+    background: #FFF6BF;
+}
+.message-box .hd {
+    height: 24px;
+    line-height: 24px;
+    background: url("../images/title-hint-messages.png") no-repeat left center;
+    padding-left: 30px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #487BB7;
+}
+.message-box .hd em {
+    float: right;
+    font-size: 12px;
+}
+.message-box .hd em a.close-button {
+    border: #FFD324 solid 1px;
+    padding: 0 5px;
+    color: #FFD324;
+    font-weight: bold;
+    text-decoration: none;
+}
+.message-box .hd em a.close-button:hover {
+    color: #6C7B81;
+    border: #6C7B81 solid 1px;
+}
+.message-box .bd {}
+.message-box .bd li {
+    line-height: 24px;
+}
+/*******************************************************************************
+ * 面包屑导航
+ ******************************************************************************/
+.breadcrumbs {
+    color: #494d51;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+.breadcrumbs span, .breadcrumbs a {
+    color: #494d51;
+}
+.breadcrumbs a:hover {
+    color: #487BB7;
+    text-decoration: underline;
+}
+/*******************************************************************************
+ * 按钮
+ ******************************************************************************/
+.button {
+    background-image: url("../images/sprite-gray.png");
+    border: 0;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+}
+a.button {
+    margin-right: 3px;
+}
+button.button span{
+    background-position: inherit right;
+    display: inline-block;
+    position: relative;
+}
+span.button input {
+    background: transparent;
+    border: 0;
+    float: left;
+    font-weight: bold;
+    padding: 0;
+}
+button.button {
+    background-color: transparent;
+    white-space: nowrap;
+}
+.button {
+    background-position: left -123px;
+    font-weight: bold;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    margin-right: 10px;
+    padding: 0 6px 0 0;
+}
+.button span,span.button input {
+    background-image: url("../images/sprite-gray.png");
+    background-position: right -123px;
+    color: #7e136a;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: inherit;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 10px;
+    _margin-left: 2px;
+    margin-right: -10px;
+    _margin-right: -3px;
+    padding-right: 10px;
+    _padding-right: 5px;
+    white-space: nowrap;
+}
+.button:hover {
+    background-position: left -294px;
+    text-decoration: none;
+}
+.button:hover span,.button:hover input {
+    background-position: right -294px;
+    text-decoration: none;
+}
+.button:active {
+    background-position: left -465px;
+}
+.button:active span,.button:active input {
+    background-position: right -465px;
+    color: #fff;
+}
+a.delete-all-selected-items {
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    border: #D4D4D4 solid 1px;
+    background-color: #F5F5F5;
+    padding: 0 5px 0 21px;
+    margin-top: -1px;
+    color: #487BB7;
+    background: url("../images/del.gif") no-repeat left center;
+}
+a.delete-all-selected-items:hover {
+    background-color: #F0F0F0;
+    border: #487BB7 solid 1px;
+    text-decoration: none;
+}
+/*******************************************************************************
+ * 工具栏
+ ******************************************************************************/
+#rbac-toolbar {
+    height: 30px;
+    background: url("../images/dot.gif") repeat-x left bottom;
+    margin-bottom: 5px;
+}
+#rbac-toolbar li {
+    display: block;
+    float: left;
+}
+#rbac-toolbar li a {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    background-image: url("../images/toolbar-btn-bg.png");
+    background-repeat: no-repeat;
+    background-position: 0 -114px;
+    padding-left: 10px;
+    margin: 0 5px;
+}
+#rbac-toolbar li a em {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    background-image: url("../images/toolbar-btn-bg.png");
+    background-repeat: no-repeat;
+    background-position: 100% -114px;
+    padding-right: 10px;
+}
+#rbac-toolbar a {
+    cursor: pointer;
+}
+#rbac-toolbar li.active a,
+#rbac-toolbar li a:hover {
+    background-position: 0 -44px;
+    text-decoration: none;
+    color: #FFF;
+}
+#rbac-toolbar li.active a em,
+#rbac-toolbar li a:hover em {
+    background-position: 100% -44px;
+}
+/*******************************************************************************
+ * portlet box
+ ******************************************************************************/
+.portlet-box {
+    border: #ccc solid 1px;
+    padding: 2px;
+}
+.portlet-box .hd {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6F7170;
+    padding-left: 30px;
+    border-bottom: #ccc solid 1px;
+    background: url("../images/title-hint-messages.png") no-repeat left center;
+}
+.portlet-box .bd {
+    padding: 5px;
+}
+.portlet-box .ft {}
+/*******************************************************************************
+ * 浮动提示框
+ ******************************************************************************/
+.float-hint-box {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C6CFDD;
+    height: auto;
+    padding: 10px;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 2px 2px 2px #D4D4D4;
+    position: absolute;
+    text-align: left;
+    text-indent: 0;
+    z-index: 99999;
+}
+.float-hint-box .arrow-box {
+    background: url("../images/float-hint-box-sprite.png") no-repeat scroll 0 0 transparent;
+    font-size: 1px;
+    height: 7px;
+    line-height: 1px;
+    margin: -17px 0 0 20px;
+    position: absolute;
+    width: 14px;
+}
+.float-hint-box .loading {
+    background: url("../images/loading.gif") no-repeat scroll center center transparent;
+    height: 60px;
+}
+.float-hint-box .content {
+    overflow: hidden;
+    line-height: 22px;
+}
+.user-auth-assignment-pointer {
+    height: 337px;
+    background: url("../images/arrow.jpg") no-repeat right 20px;
+}
+/*******************************************************************************
+ * 页面底部
+ ******************************************************************************/
+#footer {
+    text-align: center;
+    color: #6f7170;
+}
+#footer a {
+    color: #487BB7;
+}
+#footer p {
+    line-height: 60px;
+    margin: 0;
+}
+#footer p span.version {
+    color: #487BB7;
+}

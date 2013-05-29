@@ -1,0 +1,64 @@
+/* 
+    Document   : custom
+    Created on : 2012-10-30, 16:21:38
+    Author     : Terry
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body {
+	border: 0 none;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	line-height:1.4em;
+}
+/* public */
+.container-fluid h2,.container h2{font-size:23px;line-height:29px;font-weight:normal}
+.breadcrumb span.divider {padding: 0 5px;color: #CCC;}
+.grid-view .button-column{width:70px;}
+.grid-view .button-column a{padding:0 5px;}
+.grid-view{padding-top:10px;}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], 
+input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], 
+input[type="week"], input[type="number"], input[type="email"], input[type="url"], 
+input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{font-size:12px;}
+.btn{font-size:12px;}
+label, input, button, select, textarea{font-size:12px;}
+legend{font-size:16px}
+/* 登陆 */
+.form-signin {
+	max-width: 300px;
+	padding: 19px 29px 29px;
+	margin: 110px auto 20px;
+	display: block;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+
+.alert {margin-bottom: 5px;}
+.alert-block{padding-top:8px;padding-bottom:8px;}
+.alert .close {top:-4px;}
+
+/*商户 可编辑的文字链接*/
+.editable-click, a.editable-click, a.editable-click:hover {
+text-decoration: none;
+border-bottom: dashed 1px #0088cc;
+}

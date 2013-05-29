@@ -1,0 +1,174 @@
+/* 
+    Document   : custom
+    Created on : 2012-10-30, 16:21:38
+    Author     : Terry
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body {
+	border: 0 none;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+.navbar-fixed-top .brand {
+	padding-right: 0;
+	padding-left: 0;
+	margin-left: 0;
+	margin-right: 20px;
+	float: left;
+	font-weight: bold;
+	font-size: 18px;
+	color: #ccc;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px
+		rgba(255, 255, 255, .125);
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.navbar-yellow {
+	color: #fff;
+}
+.navbar-inverse .navbar-text{color:#fff}
+.navbar-inverse .navbar-inner {
+	background-color: #FF530D;
+	background-image: -moz-linear-gradient(top, #ff9900, #FF530D);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff9900),
+		to(#FF530D) );
+	background-image: -webkit-linear-gradient(top, #ff9900, #FF530D);
+	background-image: -o-linear-gradient(top, #ff9900, #FF530D);
+	background-image: linear-gradient(to bottom, #ff9900, #FF530D);
+	background-repeat: repeat-x;
+	border-color: #FF660D;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffff6600',
+		endColorstr='#ffEF5F11', GradientType=0 );
+}
+.navbar-yellow .brand,.navbar-yellow .nav>li>a {
+	color: #f9f9f9;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.navbar-inverse .nav .active>a,.navbar-inverse .nav .active>a:hover,.navbar-inverse .nav .active>a:focus
+{
+	color: #ffffff;
+	background-color: #DD7B46;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+padding: 0;
+}
+@media (max-width: 980px) {
+	/* Enable use of floated navbar text */
+	.navbar-text.pull-right {
+		float: none;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+.navbar-inverse .navbar-link {
+	color: #fff;
+}
+
+.x-panel {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-style: solid;
+	border-width: 0;
+}
+
+.x-panel-bwrap {
+	overflow: hidden;
+	zoom: 1;
+	left: 0;
+	top: 0;
+}
+
+.x-panel-body {
+	overflow: hidden;
+	zoom: 1;
+	border: 1px solid;
+	border-top: 0 none;
+	overflow: hidden;
+	position: relative; /* added for item scroll positioning */
+}
+
+.x-panel-noborder .x-panel-body-noborder {
+	border-width: 0;
+}
+
+#container {
+	height: 100%;
+}
+
+#container-menu {
+	position: absolute;
+	width: 195px;
+	left: 0;
+	top: 41px;
+	background-color: #f9f9f9;
+}
+.navbar-fixed-top .navbar-inner{z-index:1031}
+/* 左侧菜单样式 */
+.sidenav {margin: 10px 0 0;padding: 0;}
+.sidenav .icon-chevron-right {
+float: right;
+margin-top: 2px;
+margin-right: -6px;
+opacity: .25;
+}
+.sidenav > li > a {
+display: block;
+margin: 0 0 -1px;
+padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+.sidenav > .active > a {
+position: relative;
+padding: 9px 15px;
+border: 0;
+}
+.sidenav > li > ul > li{list-style: none}
+.sidenav > li > ul > li> a {
+display: block;
+margin: 0 0 -1px;
+padding: 4px 7px;
+  border: 1px solid #e5e5e5;
+}
+.nav-inverse li,.nav-inverse li a:hover{background-color: none;color:#fff}
+.navbar-inverse .nav-collapse .nav>li>a, .navbar-inverse .nav-collapse .dropdown-menu a
+{color:#fff;background: none;}
+
+.navbar-inverse .nav-collapse .nav>li>a:hover, .navbar-inverse .nav-collapse .nav>li>a:focus,
+.navbar-inverse .nav-collapse .dropdown-menu a:hover, .navbar-inverse .nav-collapse .dropdown-menu a:focus
+{background: #DD7B46;}
+.sidenav .nav-list{padding-left:15px;padding-right:0;}
+#frameZoom {
+	position: absolute;
+	left: 195px;
+	top: 41px;
+	line-height: 1px;
+	font-size: 1px;
+	z-index: -1;
+	height: 100%;
+	display: block;
+	width: 5px;
+	background-color: #ccc;
+	cursor: pointer;
+}
+#frameZoom,#container-menu,#container-main{z-index:-1999}
+.zoomLeft {background: url("../images/mini-left.gif") center center no-repeat;}
+.zoomRight {background: url("../images/mini-right.gif") center center no-repeat;}
+
+#container-main {
+	position: absolute;
+	left: 200px;
+	top: 41px;
+	height: 100%;
+	min-width: 800px;
+	background-color: ＃ECECEC;
+	width: 100%;
+}
