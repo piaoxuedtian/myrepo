@@ -7,11 +7,12 @@
  * @property integer $id
  * @property string $title
  * @property string $content
- * @property string $tags
+ * @property string $code
  * @property integer $status
  * @property integer $create_time
  * @property integer $update_time
  * @property integer $author_id
+ * @property integer $votes
  *
  * The followings are the available model relations:
  * @property Comment[] $comments
@@ -46,12 +47,12 @@ class Post extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('title, content, status, author_id', 'required'),
-			array('status, create_time, update_time, author_id', 'numerical', 'integerOnly'=>true),
+			array('status, create_time, update_time, author_id, votes', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>128),
-			array('tags', 'safe'),
+			array('code', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, content, tags, status, create_time, update_time, author_id', 'safe', 'on'=>'search'),
+			array('id, title, content, code, status, create_time, update_time, author_id, votes', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,13 +76,14 @@ class Post extends CActiveRecord
 	{
 		return array(
 			'id' => '',
-			'title' => '',
-			'content' => '',
-			'tags' => '',
-			'status' => '',
-			'create_time' => '',
-			'update_time' => '',
-			'author_id' => '',
+			'title' => '名称',
+			'content' => '简介',
+			'code' => '视频代码',
+			'status' => '状态',
+			'create_time' => '创建时间',
+			'update_time' => '修改时间',
+			'author_id' => '作者id',
+			'votes' => '票数',
 		);
 	}
 
@@ -97,17 +99,12 @@ class Post extends CActiveRecord
 		$criteria=new CDbCriteria;
 		//$criteria->order = 'id DESC';
 
-		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title);
+		$criteria->compare('content',$this->content);
+		$criteria->compare('code',$this->code);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-	static public function allStatus(){
-		return array(
-			1=>1,
-			2=>2,
-		);
 	}
 }

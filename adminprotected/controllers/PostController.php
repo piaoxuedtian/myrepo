@@ -37,6 +37,10 @@ class PostController extends Controller
 		if(isset($_POST['Post']))
 		{
 			$model->attributes=$_POST['Post'];
+			$model->status = 0;
+			$model->author_id = Yii::app()->user->id;
+			$model->create_time = time();
+			$model->update_time = time();
 			if($model->save())
 			{
 				$this->redirect(array('view','id'=>$model->id));
@@ -63,6 +67,9 @@ class PostController extends Controller
 		if(isset($_POST['Post']))
 		{
 			$model->attributes=$_POST['Post'];
+			$model->status = 0;
+			$model->author_id = Yii::app()->user->id;
+			$model->update_time = time();
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -77,7 +84,7 @@ class PostController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$model=new Post;
+		$model=new POst;
 		$model->setScenario('search');
 		$model->attributes=Yii::app()->request->getParam('Post');
 		$this->render('admin',array(

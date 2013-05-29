@@ -21,10 +21,11 @@ $this->menu=array(
 		'id',
 		'title',
 		'content',
-		'tags',
+		'code',
 		'status',
 		'create_time',
 		'update_time',
 		'author_id',
+		'votes',
 	),
 )); ?>

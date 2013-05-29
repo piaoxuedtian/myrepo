@@ -12,9 +12,8 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 		'htmlOptions'=>array('class'=>'well'),
 ));
 
-echo $form->textFieldRow($model,'id');
-
 echo $form->textFieldRow($model,'title');
+echo $form->textFieldRow($model,'code');
 $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'搜索'));
 echo CHtml::link('新建', array('post/create'),array('class'=>'btn btn-small btn-primary pull-right'));
 $this->endWidget();
@@ -38,10 +37,11 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 			'checkBoxHtmlOptions' => array('name'=>'id[]'),
 		),
 
-		'id',
 		'title',
+		'content',
+		'code',
 		'status',
-		'create_time',		array(
+		'votes',		array(
 			'header'=>'操作',
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),
